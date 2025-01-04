@@ -1,0 +1,96 @@
+<!--Nama : Zaqi Amanda-->
+<!--NIM : 2210512032-->
+<!--Kelas : A-SI -->
+<!--Dosen : Theresia , S.Kom.MTI -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hasil Pengajuan Peminatan Mahasiswa</title>
+  </head>
+  <body>
+  <fieldset>
+  <legend>Hasil Pengajuan Peminatan Mahasiswa</legend>
+  <center>
+	<p style="margin: 0%;">UPN Veteran Jakarta <img src="zaqi/upn.png" width="20" height="20"></p>
+	</center>
+  <p id="hasil"></p>
+  
+  Mata Kuliah yang di Pilih:
+  <ul id="list_mk"></ul>
+  </fieldset>
+  <div align="right" style="margin-top: 10px;">
+	<button onclick="myFunction()">Kembali</button>
+	</div>
+  
+    <script>
+	
+      let urlParams = new URLSearchParams(window.location.search);
+      let nim = urlParams.get("nim");
+      let nama = urlParams.get("nama");
+      let angkatan = urlParams.get("angkatan");
+	  let mk = [urlParams.get("mk")];
+	  const mkArray = mk.join(",").split(",");
+		
+      let tampung= [];
+	  
+		for(var i=0; i<mkArray.length; i++){
+			tampung.push(mkArray[i]);
+		}
+		
+		const list_mk  = document.getElementById('list_mk');
+		
+		tampung.forEach((item)=>{
+		  let li = document.createElement("li");
+		  li.innerText = item;
+		  list_mk.appendChild(li);
+		})
+		
+		let semester;
+    const angkatanValue = parseInt(angkatan);
+    if (!isNaN(angkatanValue)) {
+      switch (angkatanValue) {
+        case 4:
+            semester = 2022;
+            break;
+        case 5:
+            semester = 2021;
+            break;
+        case 6:
+            semester = 2021;
+            break;
+        case 7:
+            semester = 2019;
+            break;
+        case 8:
+            semester = 2019;
+            break;
+        default:
+            semester = "Tidak valid";
+          }
+        } else {
+          semester = "Tidak valid"; 
+        }
+
+		let element = document.getElementById("hasil");
+		
+		if (element !== null) {
+			element.innerHTML = 
+			"Nim : <b>" + nim +"</b>, <br/>Nama : <b>" + nama +"</b>" +"</b>, <br/>Tahun Masuk:<b>"+ semester +"</b>,";
+		}
+		
+		function myFunction() {
+        
+        let text = "Anda yain keluar ? " + "\n" + "Pilih Oke untuk keluar";
+        if (confirm(text) == true) {
+            javascript: window.close()
+        } else {
+          text = "Kamu Keluar!";
+        	}
+    	}
+      
+    </script>
+	
+	
+	
+  </body>
+</html>
