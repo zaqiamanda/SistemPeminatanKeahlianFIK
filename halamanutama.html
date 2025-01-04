@@ -1,0 +1,122 @@
+<!--Nama : Zaqi Amanda-->
+<!--NIM : 2210512032-->
+<!--Kelas : A-SI -->
+<!--Dosen : Theresia , S.Kom.MTI -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS_PrakWeb_ZaqiAmandaLubis</title>
+    <style type="text/css">
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0; 
+            padding: 0; 
+        }
+        .judulatas{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 20px;
+            background-color: rgb(9, 9, 97);
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .judul{
+            text-align: center; 
+        }
+        .container{
+            margin-top: 40px;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+        .box1{
+            margin-left: 5%;
+            text-align: left;
+            padding: 0%;
+        }
+        h1{
+           padding: 0%;
+           margin: 0%;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            border-radius: 5px; 
+            border: none;
+            font-family: Calibri;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+            font-weight: bold; 
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        .button-container {
+            display: flex; 
+            justify-content: space-between; 
+            width: 420px;
+        }
+    </style>
+   <script type="text/javascript">
+    function buka_popup(angka){
+        if(angka == 1){
+            window.open("datadiri.html",'','width=640, height=480');
+        }else{
+            window.open("kuis1.html");
+        }
+        
+    }
+</script>
+</head>
+<body onload="buka_popup();">
+    <div class="judulatas">
+        Ini adalah Ujian Tengah Semester Pemrograman Web. Klik ini untuk ke laman Fakultas Ilmu Komputer →
+    </div>
+    <div class="judul">
+         <img src="zaqi/upn.png" width="20" height="20">
+            <font style="color: rgb(6, 127, 240);"> Sistem Peminatan Fakultas Ilmu Komputer Universitas Pembanguan Veteran Jakarta</font>
+    </div>
+    <center>
+    <div class="container">
+        <div class="box1">
+            <h1 style="margin-bottom: 0%;">
+                <font style="color: rgb(6, 1, 80);">
+                    Selamat Datang pada <br> Sistem Peminatan <br> Keahlian </font> 
+            </h1>
+            <h1 style="margin-top: 0%; color: rgb(0, 140, 255);" >
+                <font style="color: rgb(250, 168, 45);">
+                Fakultas Ilmu <br>
+                Komputer </font> UPN <br>
+                Veteran Jakarta
+            </h1>
+            <p style="font-size: 12px; color: gray; font-family: Calibri;">
+                Sistem ini sebagai tolak ukur pemahaman diri saya<br>
+                terhadap materi pemrograman web sistem informasi
+            </p>
+            <br>
+            <div class="button-container">
+                <button style="background-color: rgb(0, 140, 255);" onclick="buka_popup()" >
+                    <font style="color: white;">Mulai Mengisi Peminatan ></font>
+                </button>
+                <button style="background-color: white; border: 1px solid rgb(223, 219, 219);" onclick="buka_popup(1)">
+                    <font style="color: black;">Daftar Diri</font>
+                </button>
+            </div>
+        </div>
+             <img src="zaqi/FIK.png" width="400" height="350">
+    </div>
+    </center>
+</body>
+</html>
